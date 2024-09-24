@@ -1,0 +1,103 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', none;
+}
+p{
+    font-weight: bold;
+}
+#container{
+    display: flex;
+    background: linear-gradient(135deg, rgb(0,133,66) 0%,rgb(253,200,47) 100%);
+    width: 100%;
+    padding-bottom: 5%;
+}
+#logo-petrobras{
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+    justify-self: left;
+    border-bottom-right-radius: 20px;
+}
+#logo-petrobras img{
+    width: 85%;
+    height: 85%;
+}
+#caixa-cadastro{
+    height: 100%;
+    width: 550px;
+    margin: 5%;
+    padding: 20px;
+    border: #E3DDDD 5px solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#caixa-cadastro h1{
+    font-size: xx-large;
+    line-height: 80%;
+    color: rgb(253, 200, 47);
+}
+#caixa-cadastro h2{
+    font-size: larger;
+    color: rgb(0, 133, 66);
+}
+#fornecedor-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#nome-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#descricao-produto{
+    background-color: rgb(250,250,250);
+    height: 75px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#preco-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#enviar-produto{
+    background-color: rgb(253,200,47);
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 85%;
+    color: rgb(0,133,66);
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#enviar-produto:hover{
+    background-color: #ECB739;
+}
+#caixa-cadastro table{
+    background-color: #524848
+}
+#caixa-cadastro th{
+    background-color: #E3DDDD;
+    text-align: left;
+    padding: 2px;
+}
+#caixa-cadastro td{
+    background-color: #E3DDDD;
+    padding: 2px;
+}
+#listagem-produto a{
+    font-size: small;
+}

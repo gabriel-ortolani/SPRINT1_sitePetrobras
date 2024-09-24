@@ -1,0 +1,87 @@
+#container{
+    display: flex;
+    width: 100%;
+    padding-bottom: 5%;
+    background: linear-gradient(135deg, rgb(0,133,66) 0%,rgb(253,200,47) 100%);
+}
+#logo-petrobras{
+    width: 300px;
+    height: 100%;
+    background-color: rgba(250,250,250,0.7);
+    border-bottom-right-radius: 20px;
+}
+#logo-petrobras img{
+    width: 85%;
+    height: 85%;
+}
+#lista-itens{
+    background-color: #FBFBFB;
+    width: 550px;
+    height: 100%;
+    padding: 20px;
+    margin: 5%;
+    border-radius: 20px;
+    text-align: center;
+    border: 5px #E3DDDD solid;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#pesquisa{
+    width: 85%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E3DDDD;
+    border: #524848 2px solid;
+}
+#pesquisa #btn{
+    background-color: #fdc82f;
+    color: #008542;
+    width: 20%;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#pesquisa #btn:hover{
+    background-color: #ECB739;
+}
+#pesquisa #barra{
+    width: 50%;
+    height: 20px;
+    border: #524848 2px solid;
+    border-radius: 7px;
+}
+#pesquisa select{
+    border: #524848 2px solid;
+    border-radius: 7px;
+    width: 25%;
+    height: 25px;
+}
+#lista-itens h1{
+    font-size: xx-large;
+    color: #fdc82f;
+    line-height: 80%;
+}
+#lista-itens h2{
+    font-size: larger;
+    color: #008542;
+}
+#lista-itens table{
+    background-color: #524848;
+}
+#lista-itens th{
+    background-color: #E3DDDD;
+    padding: 2px;
+    text-align: left;
+}
+#lista-itens td{
+    background-color: #E3DDDD;
+    padding: 2px;
+}
+#lista-itens td a{
+    font-size: small;
+}
