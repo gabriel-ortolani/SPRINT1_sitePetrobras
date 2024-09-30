@@ -1,8 +1,8 @@
 # SPRINT1_sitePetrobras
-Felipe Sartori Costa n°06
-Gabriel Ortolani n°07
-Pedro Henrique n°27
-Yago Moreira n°31
+Felipe Sartori Costa n°06 <br>
+Gabriel Ortolani n°07 <br>
+Pedro Henrique n°27 <br>
+Yago Moreira n°31 <br>
 
 Como atividade educacional foi nos proposto por nossos docentes criar um site da empresa Petrobras capaz de facilitar a compra e venda de podrutos de facil maneira para tanto adicionar novos produtos e fornecedores assim auxiliando a venda dos produtos.
 <a href="https://github.com/gabriel-ortolani/SPRINT1_sitePetrobras/blob/main/Codigos_Pags/index.html"><img src="https://github.com/gabriel-ortolani/SPRINT1_sitePetrobras/blob/main/img/foto-site/pagina-inicial.jpeg"></a>
