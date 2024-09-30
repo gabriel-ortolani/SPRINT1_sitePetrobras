@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Aplicando a nova fonte */
+}
+
+body {
+    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 450px;
+    border-radius: 12px; /* Borda mais arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    text-align: center;
+    border: 2px solid #278B5F; /* Borda com a cor oficial */
+}
+
+.logo {
+    max-width: 100%; /* Para garantir que a logo não ultrapasse o quadro */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+.main-container h1 {
+    margin-bottom: 15px;
+    color: #278B5F; 
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra do texto */
+}
+
+.main-container h2 {
+    margin-bottom: 25px;
+    color: #333; 
+    font-size: 1.5rem; 
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 30px 0; /* Espaçamento maior entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 1.1rem; 
+    padding: 12px 20px; 
+    background-color: #006400;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+.nav-links a:hover {
+    background-color: #005200;
+    transform: scale(1.05); /* Leve aumento no hover */
+}
