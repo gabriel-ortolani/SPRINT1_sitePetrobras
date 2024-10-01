@@ -8,20 +8,11 @@ p{
 }
 #container{
     display: flex;
-    background: linear-gradient(135deg, rgb(0,133,66) 0%,rgb(253,200,47) 100%);
-    width: 100%;
+    background: linear-gradient(to bottom right, rgb(253,200,47),rgb(0,133,66));
     padding-bottom: 5%;
-}
-#logo-petrobras{
-    width: 300px;
-    height: 100%;
-    background-color: rgba(255,255,255,0.7);
-    justify-self: left;
-    border-bottom-right-radius: 20px;
-}
-#logo-petrobras img{
-    width: 85%;
-    height: 85%;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50%;
 }
 #caixa-cadastro{
     height: 100%;
@@ -73,7 +64,7 @@ p{
     border: 1px black solid;
     border-radius: 3px;
 }
-#enviar-produto{
+#btn{
     background-color: rgb(253,200,47);
     padding: 10px;
     margin: 10px;
@@ -85,7 +76,7 @@ p{
     border-radius: 4px;
     cursor: pointer;
 }
-#enviar-produto:hover{
+#btn:hover{
     background-color: #ECB739;
 }
 #caixa-cadastro table{
@@ -102,4 +93,100 @@ p{
 }
 #listagem-produto a{
     font-size: small;
+}
+@media screen and (max-width: 426px) {
+    #caixa-cadastro {
+        width: 90%;
+        padding: 20px 5px;
+        margin: 0;
+        align-content: center;
+    }
+    #caixa-cadastro h1 {
+        font-size: larger;
+    }
+    #caixa-cadastro h2 {
+        font-size: medium;
+    }
+    #caixa-cadastro input {
+        width: 90%;
+        font-size: small;
+    }
+    #caixa-cadastro table{
+        font-size: 9px;
+        padding: 0;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px){
+    #caixa-cadastro{
+        width: 80%;
+        font-size: 25px;
+    }
+    #caixa-cadastro h1{
+        font-size: 50px;
+    }
+    #caixa-cadastro input{
+        height: 30px;
+        font-size: 20px;
+        padding: 5px;
+    }
+    #caixa-cadastro textarea{
+        height: 200px;
+        font-size: 20px;
+        padding: 5px;
+    }
+    #caixa-cadastro #btn{
+        font-size: 1.5rem;
+        height: 40px;
+    }
+}
+@media screen and (min-width: 2560px) {
+    #caixa-cadastro{
+        width: 80%;
+        font-size: 50px;
+        border: #E3DDDD 10px solid;
+        border-radius: 20px;
+    } 
+    #caixa-cadastro h1{
+        font-size: 80px;
+    }
+    #caixa-cadastro table{
+        padding: 5px;
+    }
+    #caixa-cadastro tr {
+        padding: 10px;
+        margin: 5px;
+    }
+    #caixa-cadastro th{
+        padding: 10px;
+        margin: 5px;
+    }
+    #caixa-cadastro #nome-produto{
+        height: 50px;
+        font-size: 40px;
+        padding: 7px;
+        border-radius: 10px;
+    }
+    #caixa-cadastro textarea{
+        height: 400px;
+        font-size: 40px;
+        padding: 7px;
+        border-radius: 10px;
+    }
+    #caixa-cadastro #preco-produto{
+        height: 50px;
+        font-size: 40px;
+        padding: 7px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    #caixa-cadastro select{
+        font-size: 30px;
+        height: 70px;
+        padding: 7px;
+        border-radius: 15px;
+    }
+    #caixa-cadastro #btn{
+        font-size: 2.5rem;
+        border-radius: 15px;
+    }
 }
