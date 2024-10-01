@@ -46,7 +46,7 @@ body {
     font-size: 1rem;
 }
 
-.login-form button {
+#btn-login {
     width: 100%;
     background-color: #ECB739; /* Amarelo da Petrobrás */
     color: #278B5F; 
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-.login-form button:hover {
+#btn-login:hover {
     background-color: #e6b800; /* Tom mais escuro de amarelo no hover */
 }
 

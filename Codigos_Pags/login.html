@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,12 @@
         <form class="login-form">
             <div class="input-group">
                 <label for="username">Usuário:</label>
-                <input type="text" id="username" placeholder="Digite seu nome de usuário">
+                <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
             </div>
 
             <div class="input-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" placeholder="Digite sua senha">
+                <input type="password" id="password" placeholder="Digite sua senha" required>
             </div>
 
             
@@ -28,9 +28,8 @@
             
                 <a href="#" class="forgot-password">Esqueceu sua senha?</a>
             </div>
-
-            <button type="submit"><a href="pag-principal.html">Entrar</a></button>
             
+                <a href="pag-principal.html"><button type="button" id="btn-login">Entrar</button></a>
         </form>
     </div>
 </body>
