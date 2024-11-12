@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Petrobras - Cadastro de produto</title>
+</head>
+<body>
+    <!-- <div id="container"> -->
+        <form id="caixa-cadastro">
+                <h1>Sistema de Cadastro</h1>
+                <h2>Cadastro de produto</h2>
+                <p>Fornecedor:</p>
+                <select id="fornecedor-produto">
+                    <option value="#">N/A</option>
+                    <option value="1">Fornecedor 1</option>
+                    <option value="2">Fornecedor 2</option>
+                    <option value="3">Fornecedor 3</option>
+                    <option value="4">Fornecedor 4</option>
+                    <option value="5">Fornecedor 5</option>
+                    <!-- tentar mudar os fornecedor para ler do banco de dados -->
+                </select>
+                <p>Nome do produto:</p>
+                <input type="text" id="nome-produto" required>
+                <p>Descrição:</p>
+                <textarea id="descricao-produto" required></textarea>
+                <p>Preço:</p>
+                <input type="text" id="preco-produto" required>
+                <a href="Listagem.html"><button type="button" id="btn">Confirmar</button></a>
+            <a href="pag-principal.html">Voltar</a>
+        </form>
+    <!-- </div> -->
+</body>
+</html>
