@@ -44,14 +44,14 @@ video {
     margin-bottom: 20px; /* Espaço abaixo da logo */
 }
 
-h1 {
+.titulo {
     font-size: 4rem;
     padding: 20px;
     border: 2px solid #fff;
     transition: all 0.3s ease;
 }
 
-h1:hover {
+.titulo:hover {
     color: transparent; /* Texto invisível ao passar o mouse */
     background-color: transparent; /* Mantém o fundo transparente */
     border-color: #fff; /* Mantém apenas a borda */

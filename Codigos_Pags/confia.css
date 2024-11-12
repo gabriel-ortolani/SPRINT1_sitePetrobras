@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: none;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
+h1, h2 {
+    color: #278B5F;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #278B5F;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #218751;
+}
+
+.cadastro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #278B5F;
+    border-radius: 8px;
+    background-color: #fff; /* Fundo branco para o cadastro */
+}
+
+.header {
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #278B5F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218751;
+}
+
+.fornecedores-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fornecedores-list th, .fornecedores-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.fornecedores-list th {
+    background-color: #278B5F;
+    color: white;
+}
+
+.voltar-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #278B5F;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.login-form .input-group {
+    margin-bottom: 15px;
+}
+
+.login-form .input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    text-align: right;
+}
+
+.nav-links {
+    margin-top: 20px;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #278B5F;
+    padding: 10px;
+    border: 1px solid #278B5F;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #278B5F;
+    color: white;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#logo-petrobras {
+    text-align: center;
+}
+
+#caixa-cadastro,
+#listagem-produto {
+    margin-top: 20px;
+}
+
+#listagem-produto table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#listagem-produto th, #listagem-produto td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#listagem-produto th {
+    background-color: #278B5F;
+    color: white;
+}
+
+#pesquisa {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#pesquisa input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#pesquisa input[type="button"] {
+    padding: 10px 15px;
+    background-color: #278B5F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pesquisa input[type="button"]:hover {
+    background-color: #218751;
+}
+.cadastro-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #278B5F;
+    margin: 50px auto; /* Centraliza na página */
+}
+
+.header {
+    margin-bottom: 30px; /* Espaço abaixo do cabeçalho */
+}
+
+.logo {
+    max-width: 150px; /* Ajuste para o tamanho desejado */
+    max-height: 100px; /* Limite a altura para evitar que fique muito alta */
+    height: auto; /* Mantém a proporção da logo */
+    margin-bottom: 15px; /* Espaço abaixo da logo */
+}
+
+.cadastro-container h1, .cadastro-container h2 {
+    color: #278B5F; 
+    margin-bottom: 10px; /* Espaço abaixo dos títulos */
+}
+
+.cadastro-form {
+    margin-bottom: 30px; /* Espaço abaixo do formulário */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Efeito de transição */
+}
+
+.input-group input:focus {
+    border-color: #278B5F; /* Borda verde ao focar no input */
+    box-shadow: 0 0 5px rgba(39, 139, 95, 0.5); /* Sombra ao focar */
+}
+
+.buttonsty1{
+    width: 100%;
+    background-color: #ECB739; /* Amarelo da Petrobrás */
+    color: #006400; /* Texto verde */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+.buttonsty1:hover{
+    background-color: #ECB739; 
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+h3 {
+    margin: 20px 0; 
+    color: #006400; /* Verde mais escuro */
+    font-size: 1.5rem; 
+}
+
+.fornecedores-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.fornecedores-list th, .fornecedores-list td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.fornecedores-list th {
+    background-color: #f0f0f0; /* Cor de fundo para o cabeçalho */
+    color: #278B5F; /* Verde dos cabeçalhos */
+}
+
+.fornecedores-list tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo alternada para linhas */
+}
+
+.fornecedores-list tr:hover {
+    background-color: #e0f7fa; /* Efeito de hover nas linhas */
+}
+
+.voltar-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #278B5F; /* Verde da Petrobrás */
+    text-decoration: none;
+    font-weight: bold; /* Negrito para o link */
+}
+
+.voltar-link:hover {
+   color: #278B5F;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #278B5F; 
+}
+
+.login-container h3 {
+    margin-bottom: 20px;
+    color: #278B5F; 
+    font-size: 1.5rem;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#btn-login {
+    width: 100%;
+    background-color: #ECB739; /* Amarelo da Petrobrás */
+    color: #278B5F; 
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#btn-login:hover {
+    background-color: #e6b800; /* Tom mais escuro de amarelo no hover */
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    color: #278B5F;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Sublinha no hover */
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo para melhor legibilidade */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.logo {
+    max-width: 150px; /* Ajuste o tamanho máximo da logo */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+.titulo {
+    font-size: 4rem;
+    padding: 20px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.titulo:hover {
+    color: transparent; /* Texto invisível ao passar o mouse */
+    background-color: transparent; /* Mantém o fundo transparente */
+    border-color: #fff; /* Mantém apenas a borda */
+}
+
+.buttons {
+    margin-top: 30px; /* Espaço acima dos botões */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ECB739; 
+    color: #006400;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+.button:hover {
+    background-color: #D8A32A; /* Alterar a cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.main-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 450px;
+    border-radius: 12px; /* Borda mais arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    text-align: center;
+    border: 2px solid #278B5F; /* Borda com a cor oficial */
+}
+
+.logo2 {
+    max-width: 100%; /* Para garantir que a logo não ultrapasse o quadro */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+.main-container h1 {
+    margin-bottom: 15px;
+    color: #278B5F; 
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra do texto */
+}
+
+.main-container h2 {
+    margin-bottom: 25px;
+    color: #333; 
+    font-size: 1.5rem; 
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 30px 0; /* Espaçamento maior entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 1.1rem; 
+    padding: 12px 20px; 
+    background-color: #006400;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+.nav-links a:hover {
+    background-color: #005200;
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+#container{
+    display: flex;
+    background: linear-gradient(to bottom right, rgb(253,200,47),rgb(0,133,66));
+    padding-bottom: 5%;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50%;
+}
+#caixa-cadastro{
+    height: 100%;
+    width: 550px;
+    margin: 5%;
+    padding: 20px;
+    border: #E3DDDD 5px solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#caixa-cadastro h1{
+    font-size: xx-large;
+    line-height: 80%;
+    color: rgb(253, 200, 47);
+}
+#caixa-cadastro h2{
+    font-size: larger;
+    color: rgb(0, 133, 66);
+}
+#fornecedor-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#nome-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#descricao-produto{
+    background-color: rgb(250,250,250);
+    height: 75px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#preco-produto{
+    background-color: rgb(250,250,250);
+    height: 25px;
+    width: 85%;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+#btn{
+    background-color: rgb(253,200,47);
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 85%;
+    color: rgb(0,133,66);
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: #ECB739;
+}
+#caixa-cadastro table{
+    background-color: #524848
+}
+#caixa-cadastro th{
+    background-color: #E3DDDD;
+    text-align: left;
+    padding: 2px;
+}
+#caixa-cadastro td{
+    background-color: #E3DDDD;
+    padding: 2px;
+}
+#listagem-produto a{
+    font-size: small;
+}
+
+#container{
+    display: flex;
+    width: 100%;
+    padding-bottom: 50%;
+    background: linear-gradient(to bottom right, rgb(253,200,47),rgb(0,133,66));
+    justify-content: center;
+}
+#lista-itens{
+    background-color: #FBFBFB;
+    width: 550px;
+    height: 100%;
+    padding: 20px;
+    margin: 5%;
+    border-radius: 20px;
+    text-align: center;
+    border: 5px #E3DDDD solid;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#pesquisa{
+    width: 85%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E3DDDD;
+    border: #524848 2px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#pesquisa #btn{
+    background-color: #fdc82f;
+    color: #008542;
+    width: 20%;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#pesquisa #btn:hover{
+    background-color: #ECB739;
+}
+#pesquisa #barra{
+    width: 50%;
+    height: 20px;
+    border: #524848 2px solid;
+    border-radius: 7px;
+}
+#pesquisa select{
+    border: #524848 2px solid;
+    border-radius: 7px;
+    width: 25%;
+    height: 25px;
+}
+#lista-itens h1{
+    font-size: xx-large;
+    color: #fdc82f;
+    line-height: 80%;
+}
+#lista-itens h2{
+    font-size: larger;
+    color: #008542;
+}
+#lista-itens table{
+    background-color: #524848;
+}
+#lista-itens th{
+    background-color: #E3DDDD;
+    padding: 2px;
+    text-align: left;
+}
+#lista-itens td{
+    background-color: #E3DDDD;
+    padding: 2px;
+}
+#lista-itens td a{
+    font-size: small;
+}
