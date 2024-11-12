@@ -13,7 +13,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif; /* Aplicando a nova fonte */
 }
 
-.login-container {
+.login-container1 {
     background-color: #ffffff;
     padding: 20px;
     width: 350px;
@@ -23,13 +23,13 @@ body {
     border-top: 5px solid #278B5F; 
 }
 
-.login-container h3 {
+.login-container1 h3 {
     margin-bottom: 20px;
     color: #278B5F; 
     font-size: 1.5rem;
 }
 
-.login-form label {
+.login-form1 label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
@@ -37,7 +37,7 @@ body {
     color: #333;
 }
 
-.login-form input {
+.login-form1 input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
