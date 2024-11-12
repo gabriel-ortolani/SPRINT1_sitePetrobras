@@ -12,6 +12,28 @@ body {
     background: linear-gradient(to bottom right, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
 }
 
+.pag-init{
+    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.blogin{
+    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Aplicando a nova fonte */
+}
+
+a{
+    text-decoration: none;
+    color: #278B5F;
+}
+
 .video-background {
     position: relative;
     overflow: hidden;
@@ -311,7 +333,7 @@ input[type="password"] {
 }
 
 .buttonsty1{
-    width: 100%;
+    width: 20%;
     background-color: #ECB739; /* Amarelo da Petrobrás */
     color: #006400; /* Texto verde */
     padding: 10px;
@@ -371,12 +393,11 @@ h3 {
 
 .login-container {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 35px;
     width: 350px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-top: 5px solid #278B5F; 
 }
 
 .login-container h3 {
@@ -385,7 +406,7 @@ h3 {
     font-size: 1.5rem;
 }
 
-.login-form label {
+.login-form1 label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
@@ -393,7 +414,7 @@ h3 {
     color: #333;
 }
 
-.login-form input {
+.login-form1 input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -417,7 +438,7 @@ h3 {
     background-color: #e6b800; /* Tom mais escuro de amarelo no hover */
 }
 
-.forgot-password {
+.forgot-password1 {
     display: block;
     margin: 10px 0;
     color: #278B5F;
@@ -425,7 +446,7 @@ h3 {
     font-size: 0.9rem;
 }
 
-.forgot-password:hover {
+.forgot-password1:hover {
     text-decoration: underline; /* Sublinha no hover */
 }
 
@@ -497,7 +518,7 @@ video {
     transform: scale(1.05); /* Leve aumento no hover */
 }
 
-.main-container {
+.main-container1 {
     background-color: #ffffff;
     padding: 40px;
     width: 450px;
