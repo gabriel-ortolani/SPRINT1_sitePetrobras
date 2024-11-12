@@ -40,6 +40,10 @@ a{
     height: 100vh;
 }
 
+.ab{
+    color: #fff;
+}
+
 .video-background video {
     position: absolute;
     top: 50%;
@@ -78,9 +82,21 @@ h1, h2 {
     color: #278B5F;
 }
 
-.buttons {
-    margin-top: 20px;
-    font-size: 20px;
+.buttonA {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    background-color: rgb(253,200,47); /* Amarelo da Petrobrás */
+    color: #278B5F; 
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.buttonA:hover {
+    background-color: #ECB739;
 }
 
 .button {
@@ -741,4 +757,10 @@ video {
 }
 #lista-itens td a{
     font-size: small;
+}
+
+.cdp{
+    position: relative;
+    left: 20%;
+    max-width: 80%;
 }

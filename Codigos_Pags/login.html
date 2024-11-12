@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="confia.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
+<body class="blogin">
+    <div class="login-container">
         <img src="img/image2.png" alt="">
         <h3>Login</h3>
         <form class="login-form">
-            <div>
-                <label>Usuário:</label>
-                <input type="text" placeholder="Digite seu nome de usuário" required>
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
             </div>
 
-            <div>
-                <label>Senha:</label>
-                <input type="password" placeholder="Digite sua senha" required>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
             </div>
 
-            
-            <div>
-            
-                <a href="#" class="forgot-password1">Esqueceu sua senha?</a>
+
+            <div class="input-group">
+
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
             </div>
-            
-            <button type="submit" name="login" class="botaoA">Entrar</button>
+
+                <a href="pag-principal.html"><button type="button" id="btn-login">Entrar</button></a>
         </form>
     </div>
 </body>
