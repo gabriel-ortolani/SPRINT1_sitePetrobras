@@ -1,3 +1,4 @@
+<?php include('conexao.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +16,7 @@
         <div class="content">
             <img src="img/logo-petrobras.png" alt="Logo da Petrobrás" class="logo3"> <!-- Adicionando a logo -->
             <h1 class="titulo">Petrobras</h1>
-            <a href="login.html" class="buttonA">Entrar</a>
+            <a href="login.php" class="buttonA">Entrar</a>
         </div>
     </div>
 </body>

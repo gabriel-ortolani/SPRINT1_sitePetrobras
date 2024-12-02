@@ -1,3 +1,23 @@
+<?php
+session_start();
+include('conexao.php');
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $usuario = $_POST['usuario'];
+    $senha = md5($_POST['senha']);
+
+    $sql = "SELECT * FROM usuario WHERE nome_usuario='$usuario' AND senha='$senha'";
+    $result = $conn->query($sql);
+
+    if($result->num_rows > 0){
+        $_SESSION['usuario'] = $usuario;
+        header('Location: pag-principal.php');
+    } 
+    else{
+        $error = "Usuário ou senha inválidos.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,15 +31,15 @@
     <div class="login-container">
         <img src="img/image2.png" alt="">
         <h3>Login</h3>
-        <form class="login-form">
+        <form class="login-form" method="POST">
             <div class="input-group">
                 <label for="username">Usuário:</label>
-                <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
+                <input type="text" name="usuario" placeholder="Digite seu nome de usuário" required>
             </div>
 
             <div class="input-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
             </div>
 
 
@@ -28,7 +48,8 @@
                 <a href="#" class="forgot-password">Esqueceu sua senha?</a>
             </div>
 
-                <a href="pag-principal.html"><button type="button" id="btn-login">Entrar</button></a>
+            <button type="submit" id="btn-login">Entrar</button>
+            <?php if(isset($error)) echo "<p class='message error'>$error</p>"; ?>
         </form>
     </div>
 </body>

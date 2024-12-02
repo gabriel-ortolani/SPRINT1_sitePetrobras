@@ -1,3 +1,5 @@
+<?php include('conexao.php'); ?>
+<?php include('valida_sessao.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,13 +13,13 @@
     <div class="main-container1">
         <img src="img/image3.png" alt="Logo da Petrobrás" class="logo2">
         <h1>Sistema de Cadastro</h1>
-        <h2>Bem-vindo, admin</h2>
+        <h2>Bem-vindo, <?php echo $_SESSION['usuario']; ?></h2>
         <nav class="nav-links">
             <ul>
-                <li><a href="CadastroForne.html" class="botaoV">Cadastro de Fornecedor</a></li>
-                <li><a href="CadastroProd.html">Cadastro de Produtos</a></li>
-                <li><a href="Listagem.html">Listagem de Produtos</a></li>
-                <li><a href="index.html">Sair</a></li>
+                <li><a href="CadastroForne.php" class="botaoV">Cadastro de Fornecedor</a></li>
+                <li><a href="CadastroProd.php">Cadastro de Produtos</a></li>
+                <li><a href="Listagem.php">Listagem de Produtos</a></li>
+                <li><a href="logout.php">Sair</a></li>
             </ul>
         </nav>
     </div>
