@@ -128,21 +128,21 @@ $fornecedores = $conn->query("SELECT id_fornecedor, nome_fornecedor FROM cadastr
             <label>Descrição:</label>
             <textarea name="descricao_produto" required><?php echo $produtoAtual['descricao_produto'] ?? ''; ?></textarea>
             <label>Quantidade em Estoque:</label>
-            <input type="number" name="quantidade_estoque" class="number" value="<?php echo $produtoAtual['quantidade_estoque'] ?? ''; ?>" required><br>
+            <input type="text" name="quantidade_estoque"  value="<?php echo $produtoAtual['quantidade_estoque'] ?? ''; ?>" required><br>
             <label>Preço:</label>
             <input type="text" name="preco" value="<?php echo $produtoAtual['preco'] ?? ''; ?>" required>
             <label>Imagem:</label>
             <input type="file" name="imagem">
             <?php if ($produtoAtual && $produtoAtual['imagem']): ?>
                 <img src="<?php echo $produtoAtual['imagem']; ?>" alt="Imagem do produto" style="max-width: 100px;">
-            <?php endif; ?>
+            <?php endif; ?><br>
             <button type="submit"><?php echo $produtoAtual ? 'Atualizar Produto' : 'Cadastrar Produto'; ?></button>
         </form>
         <!-- Tabela de Produtos -->
         <h2>Lista de Produtos</h2>
-        <table border="1">
+        <table border="1" class="fornecedores-list">
             <thead>
-                <tr>
+                <tr class="preto">
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Código</th>
@@ -154,7 +154,7 @@ $fornecedores = $conn->query("SELECT id_fornecedor, nome_fornecedor FROM cadastr
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody class="produtos_cd">
+            <tbody>
                 <?php while ($produto = $produtos->fetch_assoc()): ?>
                     <tr>
                         <td><?php echo $produto['id_produto']; ?></td>

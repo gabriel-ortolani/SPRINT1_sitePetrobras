@@ -189,7 +189,6 @@ if (isset($_GET['edit_id'])) {
                 <br>
                     <button type="submit"><?php echo $fornecedor? 'Atualizar': 'Cadastrar'; ?></button>
         </form>
-        <a href="pag-principal.html" class="voltar-link">Voltar</a>
     
         <!-- Exibe mensagens de sucesso ou erro -->
         <?php

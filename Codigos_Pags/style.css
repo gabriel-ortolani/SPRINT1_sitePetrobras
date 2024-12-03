@@ -111,15 +111,6 @@ h1, h2 {
     background-color: #218751;
 }
 
-.cadastro-container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #278B5F;
-    border-radius: 8px;
-    background-color: #fff; /* Fundo branco para o cadastro */
-}
-
 .header {
     text-align: center;
 }
@@ -162,16 +153,21 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
 }
+.fornecedores-list th{
+    background-color: #278B5F;
+    color: white;
+}
 
+.fornecedores-list td{
+    font-size: medium;
+}
 .fornecedores-list th, .fornecedores-list td {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.fornecedores-list th {
-    background-color: #278B5F;
-    color: white;
-}
+
+
 
 .voltar-link {
     display: block;
@@ -237,9 +233,10 @@ input[type="password"] {
 }
 
 #container {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
 }
 
 #logo-petrobras {
@@ -293,11 +290,14 @@ input[type="password"] {
 }
 .cadastro-container {
     background-color: #ffffff;
-    width: 700px;
+    width: 800px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     border: 2px solid #278B5F;
+    position: relative;
+    left: 17.5%;
+    padding: 20px;
 }
 
 .header {
@@ -366,24 +366,6 @@ h3 {
     color: #006400; /* Verde mais escuro */
     font-size: 1.5rem; 
 }
-
-.fornecedores-list {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.fornecedores-list th, .fornecedores-list td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-.fornecedores-list th {
-    background-color: #f0f0f0; /* Cor de fundo para o cabeçalho */
-    color: #278B5F; /* Verde dos cabeçalhos */
-}
-
 .fornecedores-list tr:nth-child(even) {
     background-color: #f9f9f9; /* Cor de fundo alternada para linhas */
 }
@@ -584,19 +566,10 @@ video {
     transform: scale(1.05); /* Leve aumento no hover */
 }
 
-#container{
-    display: flex;
-    background: linear-gradient(to bottom right, rgb(253,200,47),rgb(0,133,66));
-    padding-bottom: 5%;
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 50%;
-}
+
 #caixa-cadastro{
     height: 60%;
-    width: 60%;
     width: 700px;
-    margin: 0%;
     padding: 20px;
     border: #E3DDDD 5px solid;
     border-radius: 20px;
@@ -607,6 +580,14 @@ video {
     justify-content: space-between;
     position: relative;
     left: 20%;
+}
+#caixa-cadastro form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 #caixa-cadastro h1{
     font-size: xx-large;
@@ -660,34 +641,15 @@ video {
 #btn:hover{
     background-color: #ECB739;
 }
-#caixa-cadastro table{
-    background-color: #524848;
-    max-width: 90%;
-    font-size: 10px;
-}
-#caixa-cadastro th{
-    background-color: #E3DDDD;
-    text-align: left;
-    padding: 2px;
-}
-#caixa-cadastro td{
-    background-color: #E3DDDD;
-    padding: 2px;
-}
+
 #listagem-produto a{
     font-size: small;
 }
 
-#container{
-    display: flex;
-    width: 100%;
-    padding-bottom: 50%;
-    background: linear-gradient(to bottom right, rgb(253,200,47),rgb(0,133,66));
-    justify-content: center;
-}
+
 #lista-itens{
     background-color: #FBFBFB;
-    width: 600px;
+    width: 800px;
     height: 100%;
     padding: 20px;
     margin: 5%;
@@ -744,21 +706,6 @@ video {
     font-size: larger;
     color: #008542;
 }
-#lista-itens table{
-    background-color: #524848;
-}
-#lista-itens th{
-    background-color: #E3DDDD;
-    padding: 2px;
-    text-align: left;
-}
-#lista-itens td{
-    background-color: #E3DDDD;
-    padding: 2px;
-}
-#lista-itens td a{
-    font-size: medium;
-}
 
 .cdp{
     position: relative;
@@ -774,18 +721,18 @@ video {
     border-radius: 5px;
 }
 .cadastro-container table td{
-    font-size: 10px;
+    font-size: 15px;
 }
 input{
     max-width: 90%;
+    margin: 0 0 5px 0;
 }
-tbory{
-    max-width: 90%;
-}
+
 .select{
     color: #524848;
     font-size: small;
 }
-.nunber{
+.number{
     border: solid 1px #524848;
+    border-radius: 6px;
 }

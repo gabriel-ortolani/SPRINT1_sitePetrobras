@@ -89,7 +89,7 @@ if ($query) {
        <!-- Resultados -->
        <?php if (!empty($resultados)): ?>
             <h2>Produtos:</h2>
-            <table>
+            <table class="fornecedores-list">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -100,6 +100,7 @@ if ($query) {
                         <th>Preço</th>
                         <th>Fornecedor</th>
                         <th>Imagem</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -118,6 +119,10 @@ if ($query) {
                                 <?php else: ?>
                                     Sem imagem
                                 <?php endif; ?>
+                            </td>
+                            <td>
+                                <a href="CadastroProd.php?edit_id=<?php echo $row['id_produto']; ?>">Editar</a>
+                                <a href="?delete_id=<?php echo $row['id_produto']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
