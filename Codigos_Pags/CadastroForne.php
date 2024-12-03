@@ -177,7 +177,7 @@ if (isset($_GET['edit_id'])) {
             </div>
             <div class="input-group">
                 <label>Observações:</label>
-                <textarea name="observacoes" value="<?php echo $fornecedor ['observacoes'] ?? ''; ?>" draggable="false" required></textarea>
+                <textarea name="observacoes" class="input-group" value="<?php echo $fornecedor ['observacoes'] ?? ''; ?>" draggable="false" required></textarea>
             </div>
             <div class="input-group">
                 <label for="imagem">Imagem:</label>
@@ -237,7 +237,7 @@ if (isset($_GET['edit_id'])) {
         </table>
 
         <div class="actions">
-            <a href="index.php" class="back-button">Voltar</a>
+            <a href="pag-principal.php" class="back-button">Voltar</a>
         </div>
     </div>
 </body>

@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
 *{
+    font-family: 'Plus Jakarta Sans', sans-serif;
     border: 0;
     padding: 0;
     margin: 0;
     font: none;
 }
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin: 0;
-    padding: 0;
     background: linear-gradient(to bottom right, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
 }
 
@@ -248,7 +246,7 @@ input[type="password"] {
     text-align: center;
 }
 
-#caixa-cadastro,
+
 #listagem-produto {
     margin-top: 20px;
 }
@@ -295,7 +293,7 @@ input[type="password"] {
 }
 .cadastro-container {
     background-color: #ffffff;
-    width: 500px;
+    width: 700px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -595,9 +593,10 @@ video {
     padding-bottom: 50%;
 }
 #caixa-cadastro{
-    height: 100%;
-    width: 550px;
-    margin: 5%;
+    height: 60%;
+    width: 60%;
+    width: 700px;
+    margin: 0%;
     padding: 20px;
     border: #E3DDDD 5px solid;
     border-radius: 20px;
@@ -607,7 +606,7 @@ video {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    left: 10%;
+    left: 20%;
 }
 #caixa-cadastro h1{
     font-size: xx-large;
@@ -662,7 +661,9 @@ video {
     background-color: #ECB739;
 }
 #caixa-cadastro table{
-    background-color: #524848
+    background-color: #524848;
+    max-width: 90%;
+    font-size: 10px;
 }
 #caixa-cadastro th{
     background-color: #E3DDDD;
@@ -686,7 +687,7 @@ video {
 }
 #lista-itens{
     background-color: #FBFBFB;
-    width: 550px;
+    width: 600px;
     height: 100%;
     padding: 20px;
     margin: 5%;
@@ -756,7 +757,7 @@ video {
     padding: 2px;
 }
 #lista-itens td a{
-    font-size: small;
+    font-size: medium;
 }
 
 .cdp{
@@ -773,5 +774,15 @@ video {
     border-radius: 5px;
 }
 .cadastro-container table td{
-    font-size: 5px;
+    font-size: 10px;
+}
+input{
+    max-width: 90%;
+}
+tbory{
+    max-width: 90%;
+}
+.select{
+    color: #524848;
+    font-size: small;
 }
