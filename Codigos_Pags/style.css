@@ -1,738 +1,976 @@
+/* Importação da fonte 'Plus Jakarta Sans' do Google Fonts para ser usada no projeto */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+/* Reseta as margens, bordas e fontes de todos os elementos */
 *{
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    font: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;  /* Aplica a fonte personalizada */
+    border: 0;  /* Remove bordas */
+    padding: 0;  /* Remove o preenchimento */
+    margin: 0;  /* Remove as margens */
+    font: none;  /* Remove qualquer estilo de fonte pré-definido */
 }
+
+/* Estilo do body da página (fundo padrão) */
 body {
-    background: linear-gradient(to bottom right, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
+    background: linear-gradient(to bottom left, #ECB739, #278B5F);  /* Gradiente de fundo indo da cor dourada para verde */
+    max-width: 100%;  /* A largura máxima da página é 100% */
+    max-height: 100%;  /* A altura máxima da página é 100% */
 }
 
+/* Estilo da página inicial com fundo gradiente e centralização do conteúdo */
 .pag-init{
-    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%); /* Gradiente de fundo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%);  /* Gradiente de fundo da página */
+    display: flex;  /* Flexbox para centralizar o conteúdo */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    height: 100vh;  /* A altura da página é 100% da altura da tela */
 }
 
+/* Estilo da página de login com fundo gradiente e centralização do conteúdo */
 .blogin{
-    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%); /* Gradiente de fundo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Aplicando a nova fonte */
+    background: linear-gradient(135deg, #278B5F 0%, #ECB739 100%);  /* Gradiente de fundo da página de login */
+    display: flex;  /* Flexbox para centralizar o conteúdo */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    height: 100vh;  /* A altura da página é 100% da altura da tela */
+    font-family: 'Plus Jakarta Sans', sans-serif;  /* Aplica a fonte personalizada para o conteúdo */
 }
 
+/* Estilo para os links, removendo sublinhado e aplicando a cor verde */
 a{
-    text-decoration: none;
-    color: #278B5F;
+    text-decoration: none;  /* Remove o sublinhado */
+    color: #278B5F;  /* Cor verde */
 }
 
+/* Estilo para o container de vídeo com fundo, responsável por criar o efeito de vídeo de fundo */
 .video-background {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+    position: relative;  /* Permite a sobreposição de elementos */
+    overflow: hidden;  /* Esconde qualquer conteúdo que ultrapasse a área do container */
+    height: 100vh;  /* Altura da tela inteira */
 }
 
+/* Estilo para o texto com a classe 'ab', alterando a cor para branco */
 .ab{
-    color: #fff;
+    color: #fff;  /* Cor do texto é branco */
 }
 
+/* Estilo para o vídeo que será exibido como fundo */
 .video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    position: absolute;  /* Posiciona o vídeo de forma absoluta dentro do container */
+    top: 50%;  /* Centraliza verticalmente */
+    left: 50%;  /* Centraliza horizontalmente */
+    min-width: 100%;  /* O vídeo deve cobrir pelo menos 100% da largura */
+    min-height: 100%;  /* O vídeo deve cobrir pelo menos 100% da altura */
+    width: auto;  /* A largura do vídeo é ajustada automaticamente */
+    height: auto;  /* A altura do vídeo é ajustada automaticamente */
+    transform: translate(-50%, -50%);  /* Centraliza o vídeo no centro exato da tela */
+    z-index: 1;  /* Coloca o vídeo no fundo */
 }
 
+/* Overlay (sobreposição escura) para dar o efeito de escurecimento ao vídeo */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
-    z-index: 2;
+    position: absolute;  /* Posiciona o overlay sobre o vídeo */
+    top: 0;  /* Alinha ao topo */
+    left: 0;  /* Alinha à esquerda */
+    right: 0;  /* Alinha à direita */
+    bottom: 0;  /* Alinha ao fundo */
+    background: rgba(0, 0, 0, 0.5);  /* Cor preta com 50% de opacidade */
+    z-index: 2;  /* Coloca o overlay sobre o vídeo */
 }
 
+/* Estilo para o conteúdo principal (como textos e imagens), centralizado sobre o vídeo */
 .content {
-    position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    position: relative;  /* Permite a sobreposição de outros elementos */
+    z-index: 3;  /* Coloca o conteúdo sobre o overlay */
+    text-align: center;  /* Centraliza o texto */
+    padding: 20px;  /* Espaçamento interno */
+    position: absolute;  /* Posiciona o conteúdo de forma absoluta */
+    top: 50%;  /* Centraliza verticalmente */
+    left: 50%;  /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);  /* Ajusta a posição para centralizar exato */
+    text-align: center;  /* Centraliza o texto */
+    color: #fff;  /* Cor do texto é branca */
 }
 
+/* Estilo para o logo (ajustando o tamanho da imagem) */
 .logo {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    width: 150px;  /* Define a largura da logo */
 }
 
+/* Estilo para os títulos h1 e h2, alterando a cor para verde */
 h1, h2 {
-    color: #278B5F;
+    color: #278B5F;  /* Cor do título é verde */
 }
 
+/* Estilo para o botão de login */
 .buttonA {
-    position: relative;
-    top: 20px;
-    width: 100%;
-    background-color: rgb(253,200,47); /* Amarelo da Petrobrás */
-    color: #278B5F; 
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.5rem;
-    cursor: pointer;
+    position: relative;  /* Posiciona o botão */
+    top: 20px;  /* Espaço acima do botão */
+    width: 100%;  /* Largura de 100% */
+    background-color: rgb(253,200,47);  /* Cor de fundo amarela */
+    color: #278B5F;  /* Cor do texto verde */
+    padding: 10px;  /* Espaçamento interno */
+    border: none;  /* Remove a borda */
+    border-radius: 4px;  /* Bordas arredondadas */
+    font-size: 1.5rem;  /* Tamanho da fonte */
+    cursor: pointer;  /* Alteração no cursor ao passar por cima, indicando que é clicável */
 }
 
+/* Efeito de hover (passar o mouse) no botão com a classe 'buttonA' */
 .buttonA:hover {
-    background-color: #ECB739;
+    background-color: #ECB739;  /* Altera a cor de fundo para o tom dourado quando o mouse passa por cima */
 }
 
+/* Estilo do botão com a classe 'button' */
 .button {
-    background-color: #278B5F;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    margin: 5px;
-    display: inline-block;
+    background-color: #278B5F;  /* Cor de fundo verde */
+    color: white;  /* Cor do texto é branca */
+    padding: 10px 15px;  /* Espaçamento interno (10px em cima e embaixo, 15px nas laterais) */
+    border-radius: 4px;  /* Bordas arredondadas */
+    text-decoration: none;  /* Remove qualquer sublinhado */
+    margin: 5px;  /* Espaço ao redor do botão */
+    display: inline-block;  /* Exibe o botão em linha com outros elementos */
 }
 
+/* Efeito de hover (passar o mouse) no botão com a classe 'button' */
 .button:hover {
-    background-color: #218751;
+    background-color: #218751;  /* Altera a cor de fundo para um verde mais escuro quando o mouse passa por cima */
 }
 
+/* Estilo para cabeçalhos (como h1, h2, etc.) centralizados */
 .header {
-    text-align: center;
+    text-align: center;  /* Centraliza o conteúdo do cabeçalho */
 }
 
+/* Estilo para grupos de entradas (inputs) */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px;  /* Espaçamento inferior entre os grupos de inputs */
 }
 
+/* Estilo para o rótulo (label) dentro de grupos de entrada */
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
+    display: block;  /* Exibe o rótulo como bloco */
+    margin-bottom: 5px;  /* Espaçamento abaixo do rótulo */
 }
 
+/* Estilo para todos os tipos de entrada, como texto, e-mail, telefone, select e textarea */
 .input-group input,
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select,
 textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;  /* O campo de entrada ocupa 100% da largura disponível */
+    padding: 10px;  /* Espaçamento interno de 10px */
+    border: 1px solid #ccc;  /* Borda de 1px de cor cinza clara */
+    border-radius: 4px;  /* Bordas arredondadas */
 }
 
+/* Estilo para o botão (geral) */
 button {
-    background-color: #278B5F;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #278B5F;  /* Cor de fundo verde */
+    color: white;  /* Cor do texto é branca */
+    border: none;  /* Remove a borda */
+    padding: 10px 15px;  /* Espaçamento interno */
+    border-radius: 4px;  /* Bordas arredondadas */
+    cursor: pointer;  /* Altera o cursor para indicar que é clicável */
 }
 
+/* Efeito de hover (passar o mouse) no botão */
 button:hover {
-    background-color: #218751;
+    background-color: #218751;  /* Altera a cor de fundo para um verde mais escuro quando o mouse passa por cima */
 }
 
+/* Estilo para a tabela com a classe 'fornecedores-list' */
 .fornecedores-list {
-    width: 100%;
-    border-collapse: collapse;
-}
-.fornecedores-list th{
-    background-color: #278B5F;
-    color: white;
+    width: 100%;  /* A tabela ocupa 100% da largura disponível */
+    border-collapse: collapse;  /* Remove espaços entre as bordas das células */
 }
 
-.fornecedores-list td{
-    font-size: medium;
+/* Estilo para o cabeçalho da tabela (th) */
+.fornecedores-list th {
+    background-color: #278B5F;  /* Cor de fundo verde para os cabeçalhos */
+    color: white;  /* Cor do texto do cabeçalho é branca */
 }
+
+/* Estilo para as células da tabela (td) */
+.fornecedores-list td {
+    font-size: medium;  /* Tamanho de fonte médio para as células */
+}
+
+/* Estilo para os cabeçalhos e células da tabela */
 .fornecedores-list th, .fornecedores-list td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #ddd;  /* Borda de 1px com cor cinza claro */
+    padding: 8px;  /* Espaçamento interno de 8px */
 }
 
-
-
-
+/* Estilo para o link de "voltar" */
 .voltar-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
+    display: block;  /* Exibe o link como bloco */
+    margin-top: 20px;  /* Espaçamento acima do link */
+    text-align: center;  /* Centraliza o texto do link */
 }
 
+/* Contêiner de login */
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #278B5F;
-    border-radius: 8px;
-    background-color: #fff;
+    max-width: 400px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid #278B5F; /* Borda verde */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo branca */
 }
 
+/* Estilo para os grupos de entrada dentro do formulário de login */
 .login-form .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaço inferior entre os inputs */
 }
 
+/* Estilo para os rótulos dentro dos grupos de entrada */
 .login-form .input-group label {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Exibe o rótulo como bloco */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
 }
 
+/* Estilo para os campos de senha */
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%; /* O campo ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
+/* Estilo para o link de "esqueci a senha" */
 .forgot-password {
-    display: block;
-    margin: 10px 0;
-    text-align: right;
+    display: block; /* Exibe o link como bloco */
+    margin: 10px 0; /* Espaço acima e abaixo */
+    text-align: right; /* Alinha o link à direita */
 }
 
+/* Estilo para os links de navegação */
 .nav-links {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaço superior */
 }
 
+/* Remove o estilo de lista e margem dos links */
 .nav-links ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove preenchimento */
 }
 
+/* Estilo para cada item de navegação */
 .nav-links li {
-    margin: 10px 0;
+    margin: 10px 0; /* Espaço superior e inferior */
 }
 
+/* Estilo para os links dentro de '.nav-links' */
 .nav-links a {
-    text-decoration: none;
-    color: #278B5F;
-    padding: 10px;
-    border: 1px solid #278B5F;
-    border-radius: 4px;
+    text-decoration: none; /* Remove sublinhado */
+    color: #278B5F; /* Cor verde */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #278B5F; /* Borda verde */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
+/* Efeito de hover nos links de navegação */
 .nav-links a:hover {
-    background-color: #278B5F;
-    color: white;
+    background-color: #278B5F; /* Altera para fundo verde */
+    color: white; /* Muda a cor do texto para branco */
 }
 
+/* Contêiner geral com a lista de produtos */
 #container {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
+    max-width: 750px; /* Limita a largura */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    position: relative; /* Posicionamento relativo */
 }
 
+/* Estilo para o logo da Petrobras */
 #logo-petrobras {
-    text-align: center;
+    text-align: center; /* Centraliza o logo */
 }
 
-
+/* Estilo para a tabela de listagem de produtos */
 #listagem-produto {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaço superior */
 }
 
+/* Estilo para a tabela de produtos */
 #listagem-produto table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* A tabela ocupa 100% da largura */
+    border-collapse: collapse; /* Remove espaços entre células */
 }
 
+/* Estilo para as células da tabela (th e td) */
 #listagem-produto th, #listagem-produto td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #ddd; /* Borda cinza clara */
+    padding: 8px; /* Espaçamento interno */
 }
 
+/* Estilo para o cabeçalho da tabela */
 #listagem-produto th {
-    background-color: #278B5F;
-    color: white;
+    background-color: #278B5F; /* Fundo verde para cabeçalho */
+    color: white; /* Cor do texto branca */
 }
 
+/* Estilo para a barra de pesquisa */
 #pesquisa {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: flex; /* Exibe os elementos como flex container */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    margin-bottom: 20px; /* Espaço inferior */
 }
 
+/* Estilo para o campo de texto dentro da pesquisa */
 #pesquisa input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 70%; /* O campo de pesquisa ocupa 70% da largura */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
+/* Estilo para o botão de pesquisa */
 #pesquisa input[type="button"] {
-    padding: 10px 15px;
-    background-color: #278B5F;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 10px 15px; /* Espaçamento interno */
+    background-color: #278B5F; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
+/* Efeito de hover no botão de pesquisa */
 #pesquisa input[type="button"]:hover {
-    background-color: #218751;
-}
-.cadastro-container {
-    background-color: #ffffff;
-    width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border: 2px solid #278B5F;
-    position: relative;
-    left: 17.5%;
-    padding: 20px;
+    background-color: #218751; /* Cor de fundo mais escura */
 }
 
+/* Estilo do contêiner de cadastro */
+.cadastro-container {
+    background-color: #ffffff; /* Cor de fundo branca */
+    width: 800px; /* Largura fixa */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Alinha o conteúdo ao centro */
+    border: 2px solid #278B5F; /* Borda verde */
+    position: relative; /* Posicionamento relativo */
+    left: 17.5%; /* Posiciona à esquerda */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo para o cabeçalho dentro do contêiner de cadastro */
 .header {
     margin-bottom: 30px; /* Espaço abaixo do cabeçalho */
 }
 
+/* Estilo para o logo dentro do contêiner de cadastro */
 .logo {
-    max-width: 150px; /* Ajuste para o tamanho desejado */
-    max-height: 100px; /* Limite a altura para evitar que fique muito alta */
+    max-width: 150px; /* Largura máxima */
+    max-height: 100px; /* Altura máxima */
     height: auto; /* Mantém a proporção da logo */
-    margin-bottom: 15px; /* Espaço abaixo da logo */
+    margin-bottom: 15px; /* Espaço abaixo do logo */
 }
 
+/* Estilo para os títulos dentro do contêiner de cadastro */
 .cadastro-container h1, .cadastro-container h2 {
-    color: #278B5F; 
+    color: #278B5F; /* Cor verde */
     margin-bottom: 10px; /* Espaço abaixo dos títulos */
 }
 
+/* Estilo para o formulário de cadastro */
 .cadastro-form {
     margin-bottom: 30px; /* Espaço abaixo do formulário */
 }
 
+/* Estilo para os grupos de entrada no formulário de cadastro */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaço inferior entre os inputs */
 }
 
+/* Estilo para o rótulo dentro dos grupos de entrada */
 .input-group label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    display: block; /* Exibe como bloco */
+    text-align: left; /* Alinha à esquerda */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
 }
 
+/* Estilo para os campos de entrada dentro dos grupos */
 .input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s; /* Efeito de transição */
+    width: 100%; /* O campo ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave para mudança de cor da borda */
 }
 
+/* Estilo para o campo de entrada quando está em foco */
 .input-group input:focus {
-    border-color: #278B5F; /* Borda verde ao focar no input */
-    box-shadow: 0 0 5px rgba(39, 139, 95, 0.5); /* Sombra ao focar */
+    border-color: #278B5F; /* Borda verde ao focar */
+    box-shadow: 0 0 5px rgba(39, 139, 95, 0.5); /* Sombra suave ao focar */
 }
 
-.buttonsty1{
-    width: 20%;
-    background-color: #ECB739; /* Amarelo da Petrobrás */
-    color: #006400; /* Texto verde */
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+/* Estilo para o botão dentro do contêiner de cadastro */
+.buttonsty1 {
+    width: 20%; /* Largura fixa do botão */
+    background-color: #ECB739; /* Cor de fundo amarela */
+    color: #006400; /* Cor do texto verde escuro */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que o botão é clicável */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave para a cor de fundo e transformação */
 }
 
-.buttonsty1:hover{
-    background-color: #ECB739; 
-    transform: scale(1.05); /* Leve aumento no hover */
+/* Efeito de hover no botão */
+.buttonsty1:hover {
+    background-color: #ECB739; /* Mantém a cor de fundo amarela */
+    transform: scale(1.05); /* Aumenta o tamanho do botão ligeiramente */
 }
 
+/* Estilo para o título h3 */
 h3 {
-    margin: 20px 0; 
+    margin: 20px 0; /* Espaço superior e inferior */
     color: #006400; /* Verde mais escuro */
-    font-size: 1.5rem; 
+    font-size: 1.5rem; /* Tamanho da fonte */
 }
+
+/* Estilo para as linhas pares da tabela de fornecedores */
 .fornecedores-list tr:nth-child(even) {
-    background-color: #f9f9f9; /* Cor de fundo alternada para linhas */
+    background-color: #f9f9f9; /* Cor de fundo alternada para linhas pares */
 }
 
+/* Estilo para as linhas ao passar o mouse */
 .fornecedores-list tr:hover {
-    background-color: #e0f7fa; /* Efeito de hover nas linhas */
+    background-color: #e0f7fa; /* Cor de fundo ao passar o mouse */
 }
 
+/* Estilo para o link "voltar" */
 .voltar-link {
-    display: inline-block;
-    margin-top: 20px;
+    display: inline-block; /* Exibe o link como bloco */
+    margin-top: 20px; /* Espaço superior */
     color: #278B5F; /* Verde da Petrobrás */
-    text-decoration: none;
-    font-weight: bold; /* Negrito para o link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
 }
 
+/* Efeito de hover no link "voltar" */
 .voltar-link:hover {
-   color: #278B5F;
+    color: #278B5F; /* Mantém a cor do link */
 }
 
+/* Estilo para o contêiner de login */
 .login-container {
-    background-color: #ffffff;
-    padding: 35px;
-    width: 350px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 35px; /* Espaçamento interno */
+    width: 350px; /* Largura fixa */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Alinha o conteúdo ao centro */
 }
 
+/* Estilo para o título dentro do contêiner de login */
 .login-container h3 {
-    margin-bottom: 20px;
-    color: #278B5F; 
-    font-size: 1.5rem;
+    margin-bottom: 20px; /* Espaço abaixo */
+    color: #278B5F; /* Cor verde */
+    font-size: 1.5rem; /* Tamanho da fonte */
 }
 
+/* Estilo para os rótulos dentro do formulário de login */
 .login-form1 label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    display: block; /* Exibe como bloco */
+    text-align: left; /* Alinha à esquerda */
+    margin-bottom: 5px; /* Espaço abaixo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Cor do texto */
 }
 
+/* Estilo para os campos de entrada do formulário de login */
 .login-form1 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+    width: 100%; /* O campo ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço inferior */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
 }
 
+/* Estilo para o botão de login */
 #btn-login {
-    width: 100%;
+    width: 100%; /* O botão ocupa toda a largura */
     background-color: #ECB739; /* Amarelo da Petrobrás */
-    color: #278B5F; 
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
+    color: #278B5F; /* Verde da Petrobrás */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Indica que o botão é clicável */
 }
 
+/* Efeito de hover no botão de login */
 #btn-login:hover {
-    background-color: #e6b800; /* Tom mais escuro de amarelo no hover */
+    background-color: #e6b800; /* Tom mais escuro de amarelo */
 }
 
+/* Estilo para o link "esqueci a senha" */
 .forgot-password1 {
-    display: block;
-    margin: 10px 0;
-    color: #278B5F;
-    text-decoration: none;
-    font-size: 0.9rem;
+    display: block; /* Exibe o link como bloco */
+    margin: 10px 0; /* Espaço superior e inferior */
+    color: #278B5F; /* Verde da Petrobrás */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 0.9rem; /* Tamanho da fonte */
 }
 
+/* Efeito de hover no link "esqueci a senha" */
 .forgot-password1:hover {
-    text-decoration: underline; /* Sublinha no hover */
+    text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
+/* Estilo para o fundo com vídeo */
 .video-background {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+    position: relative; /* Posicionamento relativo para o overlay */
+    height: 100vh; /* Altura de 100% da viewport */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassar a área */
 }
 
+/* Estilo para o vídeo de fundo */
 video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* O vídeo ocupa toda a largura */
+    height: 100%; /* O vídeo ocupa toda a altura */
+    object-fit: cover; /* Mantém a proporção do vídeo */
 }
 
+/* Estilo para o overlay que escurece o vídeo */
 .overlay {
-    position: absolute;
+    position: absolute; /* Posicionamento absoluto para cobrir o vídeo */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo para melhor legibilidade */
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
 }
 
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
+/* Estilo para o logo dentro do fundo com vídeo */
 .logo3 {
-    max-width: 150px; /* Ajuste o tamanho máximo da logo */
-    margin-bottom: 20px; /* Espaço abaixo da logo */
+    max-width: 150px; /* Largura máxima */
+    margin-bottom: 20px; /* Espaço abaixo */
 }
 
+/* Estilo para o título da página */
 .titulo {
-    font-size: 4rem;
-    padding: 20px;
-    border: 2px solid #fff;
-    transition: all 0.3s ease;
+    font-size: 4rem; /* Tamanho grande para o título */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid #fff; /* Borda branca */
+    transition: all 0.3s ease; /* Transição suave */
 }
 
+/* Efeito de hover no título */
 .titulo:hover {
     color: transparent; /* Texto invisível ao passar o mouse */
     background-color: transparent; /* Mantém o fundo transparente */
-    border-color: #fff; /* Mantém apenas a borda */
+    border-color: #fff; /* Mantém a borda branca */
 }
 
+/* Estilo para os botões na página */
 .buttons {
-    margin-top: 30px; /* Espaço acima dos botões */
+    margin-top: 30px; /* Espaço superior para os botões */
 }
 
+/* Estilo para os botões */
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #ECB739; 
-    color: #006400;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: 0.3s, transform 0.3s; /* Efeitos de transição */
+    display: inline-block; /* Exibe como bloco */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Espaço entre os botões */
+    background-color: #ECB739; /* Cor de fundo amarela */
+    color: #006400; /* Cor do texto verde escuro */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: 0.3s, transform 0.3s; /* Efeito de transição */
 }
 
+/* Efeito de hover nos botões */
 .button:hover {
-    background-color: #D8A32A; /* Alterar a cor ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento no hover */
+    background-color: #D8A32A; /* Cor de fundo mais escura */
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
 }
 
+/* Estilo para o contêiner principal da página */
 .main-container1 {
-    background-color: #ffffff;
-    padding: 40px;
-    width: 450px;
-    border-radius: 12px; /* Borda mais arredondada */
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 40px; /* Espaçamento interno */
+    width: 450px; /* Largura fixa */
+    border-radius: 12px; /* Bordas mais arredondadas */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    text-align: center;
-    border: 2px solid #278B5F; /* Borda com a cor oficial */
+    text-align: center; /* Alinha o conteúdo ao centro */
+    border: 2px solid #278B5F; /* Borda verde */
 }
 
+/* Estilo para a logo dentro do contêiner principal */
 .logo2 {
-    max-width: 100%; /* Para garantir que a logo não ultrapasse o quadro */
-    height: auto; /* Mantém a proporção */
-    margin-bottom: 20px; /* Espaço abaixo da logo */
+    max-width: 100%; /* Mantém a proporção da logo */
+    height: auto; /* Mantém a proporção da logo */
+    margin-bottom: 20px; /* Espaço abaixo */
 }
 
+/* Estilo para o título principal dentro do contêiner */
 .main-container h1 {
-    margin-bottom: 15px;
-    color: #278B5F; 
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra do texto */
+    margin-bottom: 15px; /* Espaço abaixo */
+    color: #278B5F; /* Cor verde */
+    font-size: 2rem; /* Tamanho da fonte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave no texto */
 }
 
+/* Estilo para o subtítulo dentro do contêiner */
 .main-container h2 {
-    margin-bottom: 25px;
-    color: #333; 
-    font-size: 1.5rem; 
+    margin-bottom: 25px; /* Espaço abaixo */
+    color: #333; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
 }
 
+/* Estilo para os links de navegação */
 .nav-links ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o espaçamento interno */
 }
 
+/* Estilo para os itens da lista de navegação */
 .nav-links li {
     margin: 30px 0; /* Espaçamento maior entre os links */
 }
 
+/* Estilo para os links dentro da navegação */
 .nav-links a {
-    text-decoration: none;
-    color: #ffffff; 
-    font-size: 1.1rem; 
-    padding: 12px 20px; 
-    background-color: #006400;
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff; /* Cor branca */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    padding: 12px 20px; /* Espaçamento interno */
+    background-color: #006400; /* Cor de fundo verde */
     border-radius: 5px; /* Bordas arredondadas */
     transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
 }
 
+/* Efeito de hover nos links da navegação */
 .nav-links a:hover {
-    background-color: #005200;
-    transform: scale(1.05); /* Leve aumento no hover */
+    background-color: #005200; /* Tom mais escuro de verde */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
-
+/* Estilo para a caixa de cadastro */
 #caixa-cadastro{
-    height: 60%;
-    width: 700px;
-    padding: 20px;
-    border: #E3DDDD 5px solid;
-    border-radius: 20px;
-    background-color: rgba(255,255,255);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    left: 20%;
+    height: 60%; /* Altura de 60% */
+    width: 700px; /* Largura fixa */
+    padding: 20px; /* Espaçamento interno */
+    border: #E3DDDD 5px solid; /* Borda com cor clara */
+    border-radius: 20px; /* Bordas bem arredondadas */
+    background-color: rgba(255,255,255); /* Cor de fundo branca */
+    display: flex; /* Flexbox para layout */
+    flex-flow: column; /* Layout em coluna */
+    align-items: center; /* Alinha itens ao centro */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    position: relative; /* Posicionamento relativo */
+    left: 20%; /* Desloca 20% para a direita */
 }
+
+/* Estilo para o formulário dentro da caixa de cadastro */
 #caixa-cadastro form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Layout em coluna */
+    justify-content: center; /* Alinha itens ao centro */
+    align-items: center; /* Alinha itens ao centro */
+    height: 100%; /* Altura 100% */
+    width: 100%; /* Largura 100% */
 }
+
+/* Estilo para o título dentro da caixa de cadastro */
 #caixa-cadastro h1{
-    font-size: xx-large;
-    line-height: 80%;
-    color: rgb(253, 200, 47);
+    font-size: xx-large; /* Tamanho grande para o título */
+    line-height: 80%; /* Ajuste no espaçamento entre linhas */
+    color: rgb(253, 200, 47); /* Cor amarela */
 }
+
+/* Estilo para o subtítulo dentro da caixa de cadastro */
 #caixa-cadastro h2{
-    font-size: larger;
-    color: rgb(0, 133, 66);
+    font-size: larger; /* Tamanho maior que o normal */
+    color: rgb(0, 133, 66); /* Cor verde escuro */
 }
-#fornecedor-produto{
-    background-color: rgb(250,250,250);
-    height: 25px;
-    width: 85%;
-    border: 1px black solid;
-    border-radius: 3px;
+
+/* Estilo para os campos de entrada de produto */
+#fornecedor-produto, .nome-produto, #descricao-produto, #preco-produto {
+    background-color: rgb(250,250,250); /* Cor de fundo clara */
+    height: 25px; /* Altura do campo */
+    width: 85%; /* Largura 85% */
+    border: 1px black solid; /* Borda preta */
+    border-radius: 3px; /* Bordas arredondadas */
 }
-.nome-produto{
-    background-color: rgb(250,250,250);
-    height: 25px;
-    width: 85%;
-    border: 1px black solid;
-    border-radius: 3px;
-}
+
+/* Estilo específico para o campo de descrição */
 #descricao-produto{
-    background-color: rgb(250,250,250);
-    height: 75px;
-    width: 85%;
-    border: 1px black solid;
-    border-radius: 3px;
+    height: 75px; /* Maior altura para o campo de descrição */
 }
-#preco-produto{
-    background-color: rgb(250,250,250);
-    height: 25px;
-    width: 85%;
-    border: 1px black solid;
-    border-radius: 3px;
-}
+
+/* Estilo para o botão de cadastro */
 #btn{
-    background-color: rgb(253,200,47);
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 20px;
-    width: 85%;
-    color: rgb(0,133,66);
-    font-size: 1rem;
-    font-weight: bolder;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: rgb(253,200,47); /* Cor amarela */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Margem ao redor */
+    margin-bottom: 20px; /* Margem inferior */
+    width: 85%; /* Largura 85% */
+    color: rgb(0,133,66); /* Cor verde escuro */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bolder; /* Negrito */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Indicador de clique */
 }
+
+/* Efeito de hover no botão de cadastro */
 #btn:hover{
-    background-color: #ECB739;
+    background-color: #ECB739; /* Tom mais escuro de amarelo */
 }
 
+/* Estilo para os links de listagem de produto */
 #listagem-produto a{
-    font-size: small;
+    font-size: small; /* Tamanho pequeno da fonte */
 }
 
-
+/* Estilo para o contêiner de listagem de produtos */
 #lista-itens{
-    background-color: #FBFBFB;
-    width: 800px;
-    height: 100%;
-    padding: 20px;
-    margin: 5%;
-    border-radius: 20px;
-    text-align: center;
-    border: 5px #E3DDDD solid;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-#pesquisa{
-    width: 85%;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #E3DDDD;
-    border: #524848 2px solid;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#pesquisa #btn{
-    background-color: #fdc82f;
-    color: #008542;
-    width: 20%;
-    padding: 5px;
-    border-radius: 7px;
-    font-size: 1rem;
-    font-weight: bolder;
-    cursor: pointer;
-}
-#pesquisa #btn:hover{
-    background-color: #ECB739;
-}
-#pesquisa #barra{
-    width: 50%;
-    height: 20px;
-    border: #524848 2px solid;
-    border-radius: 7px;
-}
-#pesquisa select{
-    border: #524848 2px solid;
-    border-radius: 7px;
-    width: 25%;
-    height: 25px;
-}
-#lista-itens h1{
-    font-size: xx-large;
-    color: #fdc82f;
-    line-height: 80%;
-}
-#lista-itens h2{
-    font-size: larger;
-    color: #008542;
+    background-color: #FBFBFB; /* Cor de fundo clara */
+    width: 800px; /* Largura fixa */
+    height: 100%; /* Altura 100% */
+    padding: 20px; /* Espaçamento interno */
+    margin: 5%; /* Margem em torno */
+    border-radius: 20px; /* Bordas arredondadas */
+    text-align: center; /* Alinha o texto ao centro */
+    border: 5px #E3DDDD solid; /* Borda clara */
+    display: flex; /* Flexbox */
+    flex-flow: column wrap; /* Layout com quebra de linha */
+    align-items: center; /* Alinha itens ao centro */
+    justify-content: space-between; /* Espaço entre os itens */
 }
 
+/* Estilo para a caixa de pesquisa */
+#pesquisa{
+    width: 85%; /* Largura 85% */
+    margin: 20px; /* Margem em torno */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #E3DDDD; /* Cor de fundo clara */
+    border: #524848 2px solid; /* Borda escura */
+    display: flex; /* Flexbox */
+    justify-content: space-evenly; /* Espaço entre os itens */
+    align-items: center; /* Alinha ao centro */
+}
+
+/* Estilo para o botão dentro da caixa de pesquisa */
+#pesquisa #btn{
+    background-color: #fdc82f; /* Cor amarela */
+    color: #008542; /* Cor verde escuro */
+    width: 20%; /* Largura 20% */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 7px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bolder; /* Negrito */
+    cursor: pointer; /* Indicador de clique */
+}
+
+/* Efeito de hover no botão de pesquisa */
+#pesquisa #btn:hover{
+    background-color: #ECB739; /* Tom mais escuro de amarelo */
+}
+
+/* Estilo para a barra de pesquisa */
+#pesquisa #barra{
+    width: 50%; /* Largura de 50% */
+    height: 20px; /* Altura do campo */
+    border: #524848 2px solid; /* Borda escura */
+    border-radius: 7px; /* Bordas arredondadas */
+}
+
+/* Estilo para os campos de seleção dentro da pesquisa */
+#pesquisa select{
+    border: #524848 2px solid; /* Borda escura */
+    border-radius: 7px; /* Bordas arredondadas */
+    width: 25%; /* Largura de 25% */
+    height: 25px; /* Altura do campo */
+}
+
+/* Estilo para o título da listagem de itens */
+#lista-itens h1{
+    font-size: xx-large; /* Tamanho grande para o título */
+    color: #fdc82f; /* Cor amarela */
+    line-height: 80%; /* Ajuste no espaçamento entre linhas */
+}
+
+/* Estilo para o subtítulo da listagem de itens */
+#lista-itens h2{
+    font-size: larger; /* Tamanho maior que o normal */
+    color: #008542; /* Cor verde escuro */
+}
+
+/* Estilo para a classe cdp (possivelmente relacionada a layout ou conteúdo específico) */
 .cdp{
-    position: relative;
-    left: 20%;
-    max-width: 80%;
+    position: relative; /* Posicionamento relativo */
+    left: 20%; /* Desloca 20% para a direita */
+    max-width: 80%; /* Largura máxima de 80% */
 }
 
 /* Estilo para imagens dentro da tabela */
 .thumbnail {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.cadastro-container table td{
-    font-size: 15px;
-}
-input{
-    max-width: 90%;
-    margin: 0 0 5px 0;
+    width: 50px; /* Largura da imagem */
+    height: 50px; /* Altura da imagem */
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
-.select{
-    color: #524848;
-    font-size: small;
+/* Estilo para as células da tabela dentro do contêiner de cadastro */
+.cadastro-container table td{
+    font-size: 15px; /* Tamanho da fonte nas células da tabela */
 }
+
+/* Estilo para inputs e textareas */
+input, textarea{
+    max-width: 90%; /* Largura máxima de 90% */
+    margin: 0 0 5px 0; /* Margem inferior de 5px */
+}
+
+/* Estilo para o seletor */
+.select{
+    color: #524848; /* Cor de texto marrom escuro */
+    font-size: small; /* Tamanho pequeno da fonte */
+}
+
+/* Estilo para campos numéricos */
 .number{
-    border: solid 1px #524848;
-    border-radius: 6px;
+    border: solid 1px #524848; /* Borda sólida com cor marrom escuro */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Estilos responsivos para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+
+    /* Ajusta a largura do corpo */
+    body {
+        max-width: 100%; /* Largura máxima de 100% */
+    }
+
+    /* Ajuste do conteúdo */
+    .content {
+        max-width: 90%; /* Largura máxima de 90% */
+    }
+
+    /* Ajusta o tamanho do título */
+    .titulo {
+        font-size: 2.5rem; /* Tamanho do título */
+    }
+
+    /* Ajustes nas links de navegação */
+    .nav-links {
+        width: 300px; /* Largura fixa para links de navegação */
+    }
+
+    /* Ajustes no contêiner de cadastro */
+    .cadastro-container {
+        max-width: 90%; /* Largura máxima de 90% */
+        left: 0; /* Posicionamento à esquerda */
+    }
+
+    /* Ajustes na tabela */
+    tbody tr td, tbody tr th {
+        font-size: 1rem; /* Tamanho da fonte na tabela */
+    }
+
+    /* Ajustes na caixa de cadastro */
+    #caixa-cadastro {
+        max-width: 90%; /* Largura máxima de 90% */
+        left: 0; /* Posicionamento à esquerda */
+    }
+
+    /* Ajustes na listagem de itens */
+    #lista-itens {
+        left: 0;
+        font-size: 1rem; /* Tamanho da fonte */
+    }
+
+    /* Ajustes no contêiner de pesquisa */
+    #pesquisa {
+        max-width: 90%; /* Largura máxima de 90% */
+    }
+
+    /* Ajustes na tabela */
+    .cadastro-container {
+        padding: 10px; /* Espaçamento interno */
+    }
+
+    /* Ajuste no tamanho do título da seção de cadastro */
+    .header h1 {
+        font-size: 20px; /* Tamanho do título */
+    }
+
+    /* Ajustes no formulário de cadastro */
+    .cadastro-form input, .cadastro-form textarea, .cadastro-form button {
+        font-size: 14px; /* Tamanho da fonte nos inputs, textarea e botões */
+    }
+
+    /* Ajustes na tabela */
+    table {
+        width: 100%; /* Largura total da tabela */
+        font-size: 14px; /* Tamanho da fonte na tabela */
+        border-collapse: collapse; /* Colapsa as bordas da tabela */
+    }
+
+    /* Estilo para as células e cabeçalhos da tabela */
+    th, td {
+        padding: 8px; /* Espaçamento interno nas células */
+        text-align: left; /* Alinhamento à esquerda do texto */
+        word-wrap: break-word; /* Quebra de linha dentro das células */
+        overflow: hidden; /* Esconde conteúdo que ultrapassa o limite da célula */
+        max-width: 150px; /* Limita a largura das células */
+        white-space: normal; /* Permite quebra de linha no texto */
+    }
+
+    th {
+        font-size: 14px; /* Tamanho da fonte no cabeçalho */
+        text-align: center; /* Alinha o cabeçalho ao centro */
+    }
+
+    td {
+        font-size: 12px; /* Tamanho da fonte nas células */
+    }
+
+    /* Estilo para as labels dentro de grupos de input */
+    .input-group label {
+        font-size: 14px; /* Tamanho da fonte nas labels */
+    }
+
+    /* Estilos para tabelas roláveis */
+    .tabela-rolavel-wrapper {
+        overflow-x: auto; /* Permite rolagem horizontal */
+        -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos móveis */
+        margin-bottom: 20px; /* Margem inferior */
+        display: block; /* Exibe como bloco */
+        width: 100%; /* Largura total */
+    }
+
+    /* Ajuste na largura das colunas da tabela */
+    th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
+    th:nth-child(2), td:nth-child(2) { width: 20%; } /* Nome */
+    th:nth-child(3), td:nth-child(3) { width: 15%; } /* Código */
+    th:nth-child(4), td:nth-child(4) { width: 25%; } /* Descrição */
+    th:nth-child(5), td:nth-child(5) { width: 20%; } /* Estoque */
+    th:nth-child(6), td:nth-child(6) { width: 10%; } /* Preço */
+    th:nth-child(7), td:nth-child(7) { width: 15%; } /* Fornecedor */
+    th:nth-child(8), td:nth-child(8) { width: 10%; } /* Imagem */
+    th:nth-child(9), td:nth-child(9) { width: 10%; } /* Ações */
+
+    /* Ajustes no contêiner de lista */
+    #container{
+        left: -25px;
+        max-width: 90%; /* Largura máxima de 90% */
+    }
+
+    /* Ajustes na listagem de itens */
+    #lista-itens{
+        left: 0;
+        max-width: 90%; /* Largura máxima de 90% */
+    }
 }

@@ -7,21 +7,26 @@ CREATE TABLE `cadastro_fornecedores` (
   `endereco` varchar(350) NOT NULL,
   `telefone` int(12) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `descricao_fornecedor` varchar(200) NOT NULL,
+  `observacoes` varchar(200) NOT NULL,
+  `imagem` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_fornecedor`)
 );
 CREATE TABLE `cadastro_produto` (
-  `id_produto` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `id_produto` int(11) NOT NULL AUTO_INCREMENT,
   `nome_produto` varchar(100) DEFAULT NULL,
   `codigo_produto` int(100) DEFAULT NULL,
   `descricao_produto` varchar(200) DEFAULT NULL,
   `quantidade_estoque` int(9) DEFAULT NULL,
   `preco` double DEFAULT NULL,
-  fornecedor INT,
-  FOREIGN KEY (fornecedor) REFERENCES cadastro_fornecedor(id_fornecedor)
+  `fornecedor` int(11) DEFAULT NULL,
+  `imagem` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_produto`),
+  KEY `fornecedor` (`fornecedor`),
+  CONSTRAINT `cadastro_produto_ibfk_1` FOREIGN KEY (`fornecedor`) REFERENCES `cadastro_fornecedores` (`id_fornecedor`)
 );
-CREATE TABLE `login` (
-  `id_login` int(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-  `usuario` int(11) DEFAULT NULL,
-  `senha` int(5) DEFAULT NULL
-)
+CREATE TABLE `usuario` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_usuario` varchar(50) DEFAULT NULL,
+  `senha` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`)
+);

@@ -109,11 +109,14 @@ $fornecedores = $conn->query("SELECT id_fornecedor, nome_fornecedor FROM cadastr
 <body>
     <div id="caixa-cadastro">
         <h1>Cadastro de Produtos</h1>
+        
         <!-- Formulário de Cadastro/Edição -->
         <form method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id_produto" value="<?php echo $produtoAtual['id_produto'] ?? ''; ?>">
-            <label>Fornecedor:</label>
-            <select name="id_fornecedor" required>
+            
+            <!-- Fornecedor -->
+            <label for="id_fornecedor">Fornecedor:</label>
+            <select name="id_fornecedor" id="id_fornecedor" required>
                 <?php while ($fornecedor = $fornecedores->fetch_assoc()): ?>
                     <option value="<?php echo $fornecedor['id_fornecedor']; ?>"
                         <?php if ($produtoAtual && $produtoAtual['fornecedor'] == $fornecedor['id_fornecedor']) echo 'selected'; ?>>
@@ -121,64 +124,85 @@ $fornecedores = $conn->query("SELECT id_fornecedor, nome_fornecedor FROM cadastr
                     </option>
                 <?php endwhile; ?>
             </select>
-            <label>Nome do Produto:</label>
-            <input type="text" name="nome_produto" value="<?php echo $produtoAtual['nome_produto'] ?? ''; ?>" required>
-            <label>Código:</label>
-            <input type="text" name="codigo_produto" value="<?php echo $produtoAtual['codigo_produto'] ?? ''; ?>" required>
-            <label>Descrição:</label>
-            <textarea name="descricao_produto" required><?php echo $produtoAtual['descricao_produto'] ?? ''; ?></textarea>
-            <label>Quantidade em Estoque:</label>
-            <input type="text" name="quantidade_estoque"  value="<?php echo $produtoAtual['quantidade_estoque'] ?? ''; ?>" required><br>
-            <label>Preço:</label>
-            <input type="text" name="preco" value="<?php echo $produtoAtual['preco'] ?? ''; ?>" required>
-            <label>Imagem:</label>
-            <input type="file" name="imagem">
+            
+            <!-- Nome do Produto -->
+            <label for="nome_produto">Nome do Produto:</label>
+            <input type="text" name="nome_produto" id="nome_produto" value="<?php echo $produtoAtual['nome_produto'] ?? ''; ?>" required>
+            
+            <!-- Código -->
+            <label for="codigo_produto">Código:</label>
+            <input type="text" name="codigo_produto" id="codigo_produto" value="<?php echo $produtoAtual['codigo_produto'] ?? ''; ?>" required>
+            
+            <!-- Descrição -->
+            <label for="descricao_produto">Descrição:</label>
+            <input type="text" name="descricao_produto" id="descricao_produto" value="<?php echo $produtoAtual['descricao_produto'] ?? ''; ?>" required>
+            
+            <!-- Quantidade em Estoque -->
+            <label for="quantidade_estoque">Quantidade em Estoque:</label>
+            <input type="text" name="quantidade_estoque" id="quantidade_estoque" value="<?php echo $produtoAtual['quantidade_estoque'] ?? ''; ?>" required>
+            
+            <!-- Preço -->
+            <label for="preco">Preço:</label>
+            <input type="text" name="preco" id="preco" value="<?php echo $produtoAtual['preco'] ?? ''; ?>" required>
+            
+            <!-- Imagem -->
+            <label for="imagem">Imagem:</label>
+            <input type="file" name="imagem" id="imagem">
             <?php if ($produtoAtual && $produtoAtual['imagem']): ?>
-                <img src="<?php echo $produtoAtual['imagem']; ?>" alt="Imagem do produto" style="max-width: 100px;">
-            <?php endif; ?><br>
+                <div class="imagem-preview">
+                    <img src="<?php echo $produtoAtual['imagem']; ?>" alt="Imagem do produto">
+                </div>
+            <?php endif; ?>
+
             <button type="submit"><?php echo $produtoAtual ? 'Atualizar Produto' : 'Cadastrar Produto'; ?></button>
         </form>
+
         <!-- Tabela de Produtos -->
         <h2>Lista de Produtos</h2>
-        <table border="1" class="fornecedores-list">
-            <thead>
-                <tr class="preto">
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Código</th>
-                    <th>Descrição</th>
-                    <th>Estoque</th>
-                    <th>Preço</th>
-                    <th>Fornecedor</th>
-                    <th>Imagem</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($produto = $produtos->fetch_assoc()): ?>
-                    <tr>
-                        <td><?php echo $produto['id_produto']; ?></td>
-                        <td><?php echo $produto['nome_produto']; ?></td>
-                        <td><?php echo $produto['codigo_produto']; ?></td>
-                        <td><?php echo $produto['descricao_produto']; ?></td>
-                        <td><?php echo $produto['quantidade_estoque']; ?></td>
-                        <td><?php echo 'R$ ' . number_format($produto['preco'], 2, ',', '.'); ?></td>
-                        <td><?php echo $produto['nome_fornecedor']; ?></td>
-                        <td>
-                            <?php if ($produto['imagem']): ?>
-                                <img src="<?php echo $produto['imagem']; ?>" alt="Imagem" class="thumbnail">
-                            <?php else: ?>
-                                Sem Imagem
-                            <?php endif; ?>
-                        </td>
-                        <td class="actions">
-                            <a href="?edit_id=<?php echo $produto['id_produto']; ?>">Editar</a>
-                            <a href="?delete_id=<?php echo $produto['id_produto']; ?>" onclick="return confirm('Confirmar exclusão?')">Excluir</a>
-                        </td>
+
+        <!-- Contêiner para a tabela com rolagem -->
+        <div class="tabela-rolavel-wrapper">
+            <table border="1" class="fornecedores-list">
+                <thead>
+                    <tr class="preto">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Estoque</th>
+                        <th>Preço</th>
+                        <th>Fornecedor</th>
+                        <th>Imagem</th>
+                        <th>Ações</th>
                     </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php while ($produto = $produtos->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo $produto['id_produto']; ?></td>
+                            <td><?php echo $produto['nome_produto']; ?></td>
+                            <td><?php echo $produto['codigo_produto']; ?></td>
+                            <td><?php echo $produto['descricao_produto']; ?></td>
+                            <td><?php echo $produto['quantidade_estoque']; ?></td>
+                            <td><?php echo 'R$ ' . number_format($produto['preco'], 2, ',', '.'); ?></td>
+                            <td><?php echo $produto['nome_fornecedor']; ?></td>
+                            <td>
+                                <?php if ($produto['imagem']): ?>
+                                    <img src="<?php echo $produto['imagem']; ?>" alt="Imagem" class="thumbnail">
+                                <?php else: ?>
+                                    Sem Imagem
+                                <?php endif; ?>
+                            </td>
+                            <td class="actions">
+                                <a href="?edit_id=<?php echo $produto['id_produto']; ?>">Editar</a>
+                                <a href="?delete_id=<?php echo $produto['id_produto']; ?>" onclick="return confirm('Confirmar exclusão?')">Excluir</a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+        
         <a href="pag-principal.php" class="back-button">Voltar</a>
     </div>
 </body>
