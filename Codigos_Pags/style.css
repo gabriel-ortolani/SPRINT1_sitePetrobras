@@ -7,7 +7,9 @@
     font: none;
 }
 body {
-    background: linear-gradient(to bottom right, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
+    background: linear-gradient(to bottom left, #ECB739, #278B5F); /* Fundo padrão para todas as páginas */
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .pag-init{
@@ -67,9 +69,14 @@ a{
 .content {
     position: relative;
     z-index: 3;
-    color: white;
     text-align: center;
     padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
 }
 
 .logo {
@@ -466,15 +473,6 @@ video {
     background: rgba(0, 0, 0, 0.5); /* Escurece o fundo para melhor legibilidade */
 }
 
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
 .logo3 {
     max-width: 150px; /* Ajuste o tamanho máximo da logo */
     margin-bottom: 20px; /* Espaço abaixo da logo */
@@ -723,7 +721,7 @@ video {
 .cadastro-container table td{
     font-size: 15px;
 }
-input{
+input, textarea{
     max-width: 90%;
     margin: 0 0 5px 0;
 }
@@ -735,4 +733,117 @@ input{
 .number{
     border: solid 1px #524848;
     border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        width: 300px;
+    }
+
+    .cadastro-container {
+        max-width: 90%;
+        left: 0;
+    }
+
+    tbody tr td, tbody tr th {
+        font-size: 1rem;
+    }
+
+    #caixa-cadastro {
+        max-width: 90%;
+        left: 0;
+    }
+
+    #lista-itens {
+        left: 0;
+        font-size: 1rem;
+    }
+
+    #pesquisa {
+        max-width: 90%;
+    }
+
+    /* Tabela responsiva */
+    .cadastro-container {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .cadastro-form input, .cadastro-form textarea, .cadastro-form button {
+        font-size: 14px;
+    }
+
+    /* Tabela */
+    table {
+        width: 100%;
+        font-size: 14px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-width: 150px; /* Limita a largura das células */
+        white-space: normal; /* Permite que o texto quebre e não ultrapasse a largura da célula */
+    }
+
+    th {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+    }
+
+    /* Tabela rolável */
+    .tabela-rolavel-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Habilita a rolagem suave em dispositivos móveis */
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Ajusta a largura das colunas individualmente */
+    th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
+    th:nth-child(2), td:nth-child(2) { width: 20%; } /* Nome */
+    th:nth-child(3), td:nth-child(3) { width: 15%; } /* Código */
+    th:nth-child(4), td:nth-child(4) { width: 25%; } /* Descrição */
+    th:nth-child(5), td:nth-child(5) { width: 20%; } /* Estoque */
+    th:nth-child(6), td:nth-child(6) { width: 10%; } /* Preço */
+    th:nth-child(7), td:nth-child(7) { width: 15%; } /* Fornecedor */
+    th:nth-child(8), td:nth-child(8) { width: 10%; } /* Imagem */
+    th:nth-child(9), td:nth-child(9) { width: 10%; } /* Ações */
+
+    #container{
+        left: -25px;
+        max-width: 90%;
+    }
+
+    #lista-itens{
+        left: 0;
+        max-width: 90%;
+    }
 }

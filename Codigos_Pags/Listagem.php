@@ -84,54 +84,58 @@ if ($query) {
                 <input type="text" name="pesquisa" placeholder="Pesquise por produtos ou fornecedores">
                 <button type="submit">Pesquisar</button>
             </form>
-            <?php if (isset($mensagem)) echo "<p class='message" .($conn->error ? "error" : "success"). "'> $mensagem</p>"; 
-        ?>
-       <!-- Resultados -->
-       <?php if (!empty($resultados)): ?>
-            <h2>Produtos:</h2>
-            <table class="fornecedores-list">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Produto</th>
-                        <th>Código</th>
-                        <th>Descrição</th>
-                        <th>Estoque</th>
-                        <th>Preço</th>
-                        <th>Fornecedor</th>
-                        <th>Imagem</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($resultados as $row): ?>
-                        <tr>
-                            <td><?php echo $row['id_produto']; ?></td>
-                            <td><?php echo $row['nome_produto']; ?></td>
-                            <td><?php echo $row['codigo_produto']; ?></td>
-                            <td><?php echo $row['descricao_produto']; ?></td>
-                            <td><?php echo $row['quantidade_estoque']; ?></td>
-                            <td><?php echo 'R$ ' . number_format($row['preco'], 2, ',', '.'); ?></td>
-                            <td><?php echo $row['nome_fornecedor']; ?></td>
-                            <td>
-                                <?php if ($row['imagem']): ?>
-                                    <img src="<?php echo $row['imagem']; ?>" alt="Imagem do produto" style="max-width: 100px;">
-                                <?php else: ?>
-                                    Sem imagem
-                                <?php endif; ?>
-                            </td>
-                            <td>
-                                <a href="CadastroProd.php?edit_id=<?php echo $row['id_produto']; ?>">Editar</a>
-                                <a href="?delete_id=<?php echo $row['id_produto']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php else: ?>
-            <p>Nenhum produto encontrado.</p>
-        <?php endif; ?>
-        <a href="pag-principal.php">Voltar</a>
+
+            <?php if (isset($mensagem)) echo "<p class='message" .($conn->error ? "error" : "success"). "'> $mensagem</p>"; ?>
+
+            <!-- Resultados -->
+            <?php if (!empty($resultados)): ?>
+                <h2>Produtos:</h2>
+                <div class="tabela-rolavel-wrapper"> <!-- Div que possibilita a rolagem -->
+                    <table class="fornecedores-list">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Produto</th>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Estoque</th>
+                                <th>Preço</th>
+                                <th>Fornecedor</th>
+                                <th>Imagem</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($resultados as $row): ?>
+                                <tr>
+                                    <td><?php echo $row['id_produto']; ?></td>
+                                    <td><?php echo $row['nome_produto']; ?></td>
+                                    <td><?php echo $row['codigo_produto']; ?></td>
+                                    <td><?php echo $row['descricao_produto']; ?></td>
+                                    <td><?php echo $row['quantidade_estoque']; ?></td>
+                                    <td><?php echo 'R$ ' . number_format($row['preco'], 2, ',', '.'); ?></td>
+                                    <td><?php echo $row['nome_fornecedor']; ?></td>
+                                    <td>
+                                        <?php if ($row['imagem']): ?>
+                                            <img src="<?php echo $row['imagem']; ?>" alt="Imagem do produto" style="max-width: 100px;">
+                                        <?php else: ?>
+                                            Sem imagem
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <a href="CadastroProd.php?edit_id=<?php echo $row['id_produto']; ?>">Editar</a>
+                                        <a href="?delete_id=<?php echo $row['id_produto']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div> <!-- Fim da tabela rolável -->
+            <?php else: ?>
+                <p>Nenhum produto encontrado.</p>
+            <?php endif; ?>
+
+            <a href="pag-principal.php">Voltar</a>
         </div>
     </div>
 </body>
