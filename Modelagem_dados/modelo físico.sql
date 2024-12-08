@@ -30,3 +30,9 @@ CREATE TABLE `usuario` (
   `senha` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
 );
+INSERT INTO usuario(nome_usuario, senha)
+VALUES
+("Gabriel"MD5("1234"))
+("Pedro"MD5("9999"))
+("Felipe"MD5("1122"))
+("Yago"MD5("4321"))
