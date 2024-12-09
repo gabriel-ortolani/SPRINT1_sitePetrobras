@@ -1,8 +1,8 @@
 # SPRINT1_sitePetrobras
-Felipe Sartori Costa n°06 <br>
-Gabriel Ortolani n°07 <br>
-Pedro Henrique n°27 <br>
-Yago Moreira n°31 <br>
+Felipe Sartori Costa <br>
+Gabriel Ortolani <br>
+Pedro Henrique <br>
+Yago Moreira <br>
 
 Como atividade educacional foi nos proposto por nossos docentes criar um site da empresa Petrobras capaz de facilitar a compra e venda de podrutos de facil maneira para tanto adicionar novos produtos e fornecedores assim auxiliando a venda dos produtos.
 <a href="https://github.com/gabriel-ortolani/SPRINT1_sitePetrobras/blob/main/Codigos_Pags/index.html"><img src="https://github.com/gabriel-ortolani/SPRINT1_sitePetrobras/blob/main/img/foto-site/pagina-inicial.jpeg" height="350"></a>
@@ -27,7 +27,25 @@ Esse é o modelo físico que mostra o codigo usado no MySQL Workbensh para a cri
 
 
 # sprint 3
-Com a finalização da Sprint 2 realizando a criação do banco de dados na Sprint 3 realizaremos a transformação dos arquivos html em php para linkar com o banco de dados assim armazenando e utilizando esses dados em nosso site. Logo abaixo temos o nosso cronograma que mostra o processo de cada Sprint e a previssão da finalização da atividade com a entrega da Sprint 3
+Com a finalização da Sprint 2 realizando a criação do banco de dados na Sprint 3 realizaremos a transformação dos arquivos html em php para linkar com o banco de dados assim armazenando e utilizando esses dados em nosso site.
+Com a implementação do banco de dados foi necessario adicionar o php e atualizar o html e css com essa adição é possivel realizar o cadastro de fornecedores e produdos e tambem há uma aba para pesquisar por produtos especificos filtrando por nome do produto ou pelo fornecedor nas imagens abaixo pode ser visto esse site com essas abas
 
-<img height="350" alt="image" src="https://github.com/user-attachments/assets/51d16d4b-dc1c-445a-8344-816439b699a5">
+<img width="647" alt="image" src="https://github.com/user-attachments/assets/44e43304-1e20-4120-a9e4-cba8e917a571">
+
+<img width="646" alt="image" src="https://github.com/user-attachments/assets/55ae7197-cb49-4616-9f15-fa43ad48427a">
+
+<img width="644" alt="image" src="https://github.com/user-attachments/assets/7f87c5d8-5be0-41d6-a999-89c4fabe9cd8"><br>
+
+Esse sitema faz com que sejá possivel cadastrar oa dados colocados na tabela no proprio banco de dados assim os guardando e como na listaem de produto buscando esse dados e exibindo-os.
+Tambem foi fito um sistema de validação de sessão que inpede usuarios sem estarem cadastrados o código é mostrado logo abaixo
+
+<img width="421" alt="image" src="https://github.com/user-attachments/assets/8a918818-5913-41bc-837c-c6dcc73093f2"><br>
+
+Com esse sistema a invação de pessoas não autorizadas se torna muito mais dificil.
+
+Logo abaixo temos o cronograma do projeto contendo todos as datas de entrega e finalização dos processos
+
+<img width="580" alt="image" src="https://github.com/user-attachments/assets/94420017-373d-4b53-9907-3424b8b2f10f"><br>
+
+Em clocusão a realização dessa atividade contribuiu para o entendimento do banco de dados e a códificação em PHP assim nos dando um desafio tornando a aprendizagem mais intuitiva e dinamica assim podemos dizer q essa projeto como atividade educacional foi um succeso para nosso aprendizado.
 
