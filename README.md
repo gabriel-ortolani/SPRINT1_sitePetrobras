@@ -45,7 +45,7 @@ Com esse sistema a invação de pessoas não autorizadas se torna muito mais dif
 
 Logo abaixo temos o cronograma do projeto contendo todos as datas de entrega e finalização dos processos
 
-<img width="478" alt="image" src="https://github.com/user-attachments/assets/37fce8d8-bb78-42b5-b30e-9f71194d01ad">
+<img width="580" alt="image" src="https://github.com/user-attachments/assets/94420017-373d-4b53-9907-3424b8b2f10f"><br>
 
 Em clocusão a realização dessa atividade contribuiu para o entendimento do banco de dados e a códificação em PHP assim nos dando um desafio tornando a aprendizagem mais intuitiva e dinamica assim podemos dizer q essa projeto como atividade educacional foi um succeso para nosso aprendizado.
 
