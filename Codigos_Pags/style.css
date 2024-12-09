@@ -284,6 +284,8 @@ input[type="password"] {
     margin: 0 auto; /* Centraliza o conteúdo */
     padding: 20px; /* Espaçamento interno */
     position: relative; /* Posicionamento relativo */
+    left: -25px;
+    max-width: 90%;/* Largura máxima de 90% */
 }
 
 /* Estilo para o logo da Petrobras */
@@ -746,6 +748,8 @@ video {
     flex-flow: column wrap; /* Layout com quebra de linha */
     align-items: center; /* Alinha itens ao centro */
     justify-content: space-between; /* Espaço entre os itens */
+    position: relative;
+    left: 10%;
 }
 
 /* Estilo para a caixa de pesquisa */
@@ -961,12 +965,6 @@ input, textarea{
     th:nth-child(7), td:nth-child(7) { width: 15%; } /* Fornecedor */
     th:nth-child(8), td:nth-child(8) { width: 10%; } /* Imagem */
     th:nth-child(9), td:nth-child(9) { width: 10%; } /* Ações */
-
-    /* Ajustes no contêiner de lista */
-    #container{
-        left: -25px;
-        max-width: 90%; /* Largura máxima de 90% */
-    }
 
     /* Ajustes na listagem de itens */
     #lista-itens{
